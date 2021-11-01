@@ -1,4 +1,4 @@
-# Auto-Color V0.2  
+# Auto-Color API V0.2  
 
 ## Automatic Color Scheme Generation using K-means Clustering.
 
@@ -10,7 +10,10 @@ This is only a proof of concept / MVP - check below link for development journal
 
 [AutoColor Notes](https://light-brook-fae.notion.site/AutoColor-0691e08e305b4b7cb6c54dc8cf0ee50e)
 
+[Demo](https://auto-color-1337.web.app/)
+
 ### Problem Definition:
+
 There is some friction involved when a user needs to define a color scheme for the presentation of their content - such as in cases of any CMS system, personal blog provider, etc.
 
 ### Proposed Solution:
@@ -20,6 +23,28 @@ The aim of this project is to provide color scheme suggestions - based on the co
 It has the ability to extract the colors of images, and use pre-existing notions of color harmony to figure out a pleasant mix of colors to use based on those extracted colors.
 
 Furthermore - I use an unsupervised machine learning technique to cluster similar colors to lay the groundwork for creating suggestions of colors that harmonize with multiple sources of colors - i.e generating a color scheme that works with both the image itself but also the images surrounding.
+
+## Simple Usage: 
+
+### 
+
+### Body Parameters
+
+- hslStrings: array of strings formatted to valid hsl values.
+- method: string denoting which complement method to be used to generate complementary colors.
+  - triad
+  - complements
+
+- POST: https://auto-color-api-b27htdz72a-lz.a.run.app/colors
+- JSON: `{`
+	`"hslStrings": [`
+	  `"hsl(151, 33%, 21%)",`
+    `"hsl(162, 65%, 48%)",`
+    `"hsl(1, 65%, 58%)",`
+    `"hsl(140, 12%, 60%)"`
+  `],`
+	`"method": "triad"`
+	`}`
 
 
 
