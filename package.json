@@ -1,0 +1,24 @@
+{
+  "name": "auto-color-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node lib/index.js",
+    "dev": "concurrently \"tsc -w\" \"nodemon lib/index.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chroma-js": "^2.1.2",
+    "concurrently": "^6.3.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.14",
+    "stripe": "^8.185.0",
+    "typescript": "^4.4.4"
+  }
+}
